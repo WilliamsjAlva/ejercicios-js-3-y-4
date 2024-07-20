@@ -55,7 +55,7 @@ else if(horasEstacionadas <= 5){
 else{
     facturaFinal =  (tarifaBasica * 2) + (3 *(tarifaBasica*1.5 )) + ((horasEstacionadas -5)* tarifaBasica * 2);
 }
-console.log(facturaFinal)
+console.log("Factura final: " + facturaFinal)
 
 // SEGUNDO EJERCICIO
 
