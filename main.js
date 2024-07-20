@@ -32,6 +32,7 @@ Requisitos:
 
 
 */
+//  CUARTO EJERCICIO
 // Primera parte
 
 let tarifaBasica = 2;
@@ -47,13 +48,49 @@ let facturaFinal;
 // Segunda parte
 if(horasEstacionadas <= 2){
     facturaFinal = horasEstacionadas * tarifaBasica;
-    console.log(facturaFinal)
 }
 else if(horasEstacionadas <= 5){
-    facturaFinal = horasEstacionadas * aumento50;
-    console.log(facturaFinal);
+    facturaFinal = horasEstacionadas * aumento50;;
 }
 else{
-    facturaFinal =  (tarifaBasica * 2) + (3 *(tarifaBasica* 50/100 )) + (tarifaBasica* 100/100);
-    console.log(facturaFinal);
+    facturaFinal =  (tarifaBasica * 2) + (3 *(tarifaBasica*1.5 )) + ((horasEstacionadas -5)* tarifaBasica * 2);
 }
+console.log(facturaFinal)
+
+// SEGUNDO EJERCICIO
+
+let empleado = {
+    nombre: "Jose",
+    salarioBase: 3200,
+    anosExperiencia: 6,
+    calificacion: 4
+};
+
+let bonificacionDesempeno;
+let bonificacionExperiencia;
+
+if(empleado.calificacion >= 4){
+    bonificacionDesempeno = empleado.salarioBase * 0.10
+}
+
+if(empleado.anosExperiencia > 5){
+    bonificacionExperiencia = empleado.salarioBase * 0.05
+}
+
+let salarioConBonificaciones = empleado.salarioBase + bonificacionDesempeno + bonificacionExperiencia;
+
+let impuesto;
+if(salarioConBonificaciones > 3000){
+    impuesto = salarioConBonificaciones * 0.20
+}
+
+let salarioFinal = salarioConBonificaciones - impuesto
+
+let bonoAdicional;
+if (salarioFinal > 3500){
+    bonoAdicional = 500
+}
+
+
+console.log(bonificacionDesempeno)
+console.log(bonificacionExperiencia)
