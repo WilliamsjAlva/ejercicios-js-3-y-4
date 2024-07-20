@@ -61,7 +61,7 @@ console.log(facturaFinal)
 
 let empleado = {
     nombre: "Jose",
-    salarioBase: 3200,
+    salarioBase: 5000,
     anosExperiencia: 6,
     calificacion: 4
 };
@@ -83,14 +83,29 @@ let impuesto;
 if(salarioConBonificaciones > 3000){
     impuesto = salarioConBonificaciones * 0.20
 }
+else{
+    impuesto = 0
+}
 
 let salarioFinal = salarioConBonificaciones - impuesto
 
-let bonoAdicional;
+let bonoAdicional = 500
 if (salarioFinal > 3500){
-    bonoAdicional = 500
+    salarioFinal + bonoAdicional
+}
+else{
+    bonoAdicional = 0
 }
 
+let salarioFinalTotal = salarioConBonificaciones - impuesto + bonoAdicional
 
-console.log(bonificacionDesempeno)
-console.log(bonificacionExperiencia)
+console.log("Nombre: " + empleado.nombre)
+console.log("Salario: $" + empleado.salarioBase) 
+console.log("Años de experiencia: " + empleado.anosExperiencia + " años")
+console.log("Bonificacion por desempeño: $" + bonificacionDesempeno)
+console.log("Bonificacion por experiencia: $" + bonificacionExperiencia)
+console.log("Salario con bonificaciones: $" + salarioConBonificaciones)
+console.log("Impuesto: $" + impuesto)
+console.log("Salario final: $" + salarioFinal)
+console.log("Bono: $" + bonoAdicional)
+console.log("Salario final total: $" + salarioFinalTotal)
