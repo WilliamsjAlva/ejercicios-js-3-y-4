@@ -54,6 +54,6 @@ else if(horasEstacionadas <= 5){
     console.log(facturaFinal);
 }
 else{
-    facturaFinal =  (tarifaBasica * 2) + (3 *(tarifaBasica*1.5 )) + ();
+    facturaFinal =  (tarifaBasica * 2) + (3 *(tarifaBasica* 50/100 )) + (tarifaBasica* 100/100);
     console.log(facturaFinal);
 }
